@@ -20,6 +20,7 @@ function getHistory(){
     });
 }
 
+//Updates hints history section
 function showGuesses(playersGuesses){
   $('#p1LastGuess').empty().append(playersGuesses[0]);
   $('#p2LastGuess').empty().append(playersGuesses[1]);
