@@ -1,3 +1,11 @@
+header{
+	font-size: 30px;
+	color: rgb(19, 157, 157);
+}
+h1{
+	background-color: rgb(39, 39, 235);
+	background-size: 200px;
+}
 body {
 	height: 100px;
 	margin: 100px;
