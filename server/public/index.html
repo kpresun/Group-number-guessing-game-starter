@@ -10,15 +10,23 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <h1>YOUR GAME HERE!</h1>
-    <!-- Section to show history of all players guesses -->
-    <section class="guessesHistory">
-      <h3>Guesses history</h3>
-      <p>Player 1 <b id="p1LastGuess"></b></p>
-      <p>Player 2 <b id="p2LastGuess"></b></p>
-      <p>Player 3 <b id="p3LastGuess"></b></p>
-      <p>Player 4 <b id="p4LastGuess"></b></p>
-    </section>
-</body>
+  <header>
+    <h1>GUESS THAT NUMBER!</h1>
+  </header>
+      <body>
+        <input type="text" placeholder="Jose, choose a number between ,1-25" id="joseInput">
+        <input type="text" placeholder="Shawn, choose a number between ,1-25" id="shawnInput">
+        <input type="text" placeholder="Kong, choose a number between ,1-25" id="KongInput">
+        <input type="text" placeholder="Abram, choose a number between ,1-25" id="AbramInput">
+        <button type="button" id="myBtn">Submit your Click!</button>
+
+        <section class="guessesHistory">
+          <h3>Guesses history</h3>
+          <p>Player 1 <b id="p1LastGuess"></b></p>
+          <p>Player 2 <b id="p2LastGuess"></b></p>
+          <p>Player 3 <b id="p3LastGuess"></b></p>
+          <p>Player 4 <b id="p4LastGuess"></b></p>
+        </section>
+      </body>
+
 </html>
