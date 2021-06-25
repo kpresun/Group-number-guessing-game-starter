@@ -21,7 +21,7 @@ function getHistory(){
 }
 
 //Updates hints history section
-function showGuesses(playersGuesses){
+function showHistory(playersGuesses){
   $('#p1LastGuess').empty().append(playersGuesses[0]);
   $('#p2LastGuess').empty().append(playersGuesses[1]);
   $('#p3LastGuess').empty().append(playersGuesses[2]);
