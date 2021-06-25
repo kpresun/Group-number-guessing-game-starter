@@ -19,3 +19,16 @@ body {
 	background-color: rgb(33, 21, 113);
 	background-position: top;
 }
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0 0 0;
+	box-sizing: border-box;
+	border: 2px solid rgb(34, 0, 255);
+	background-color: #3CBC8D;
+  }
+
+  input{
+
+  }
