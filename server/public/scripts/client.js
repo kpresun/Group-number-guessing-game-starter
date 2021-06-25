@@ -5,8 +5,7 @@ function handleReady() {
   getHistory();
 //Abrams Code
 // Get value on button click and show alert
-  $("#myBtn").on('click', submitAnswer(){
-  })
+  $("#myBtn").on('click', submitAnswer())
 }
 
 function getHistory(){
