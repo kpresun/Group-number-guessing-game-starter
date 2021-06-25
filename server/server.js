@@ -28,6 +28,7 @@ app.get('/history', (req, res) => {
 
 //get inputs and make comparison with random number
 app.post('/comparison', (req, res) => {
+  guessArray = [];
   let guesses = req.body;
   guessArray.push(guesses.joseGuess);
   guessArray.push(guesses.shawnGuess);
