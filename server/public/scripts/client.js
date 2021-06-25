@@ -2,10 +2,8 @@ $(handleReady)//Changed it because it was showing as deprecated
 
 function handleReady() {
   console.log("jquery is loaded!")
-  getHistory();
-//Abrams Code
-// Get value on button click and show alert
-  $("#myBtn").on('click', submitAnswer())
+  // Get value on button click and show alert
+  $("#myBtn").on('click', submitAnswer)
 }
 
 function getHistory(){
@@ -30,26 +28,40 @@ function showHistory(playersGuesses){
   $('#p3LastGuess').empty().append(playersGuesses[2]);
   $('#p4LastGuess').empty().append(playersGuesses[3]);
 }
+
+function doComparison(name,description){
+  $.ajax({
+      type: 'POST',
+      url: '/comparison',
+      data: {
+          joseGuess: answers.joseGuess,
+          shawnGuess: answers.shawnGuess,
+          kongGuess: answers.kongGuess,
+          abramGuess: answers.abramGuess,
+      },
+      dataType: 'json'
+  })
+  .then(function (response) {
+      getHistory(response);
+  })
+  .catch(function (response){
+      console.log('Sorry something went wrong.', response);
+  });
+}
   
-
-  //created global array with nested object
-const answers = [];
-
-//making function to push inputs into employeeList array & grab employee details from the input fields..
+//Abram stuff
+let answers = {};
 function submitAnswer() {
-  
-let newAnswer= {
-   fName: $('#joseInput').val(),
-   lName: $('#shawnInput').val(),
-   idNumber: $('#KongInput').val(),
-   jobTitle: $('#AbramInput').val(),
-    }
-
+  answers = {
+    joseGuess: $('#joseInput').val(),
+    shawnGuess: $('#shawnInput').val(),
+    kongGuess: $('#KongInput').val(),
+    abramGuess: $('#AbramInput').val(),
+  }
     //clear the input fields. 
-$('#joseInput').val('')
-$('#shawnInput').val('')
-$('#KongInput').val('')
-$('#AbramInput').val('')
-
-answers.push(submitAnswer);
+  $('#joseInput').val('');
+  $('#shawnInput').val('');
+  $('#KongInput').val('');
+  $('#AbramInput').val('');
+  doComparison();
 }
